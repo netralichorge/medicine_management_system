@@ -3,16 +3,22 @@ import './App.css';
 import Medicine from './component/Medicines/Medicine';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Navbar from './component/Navbar';
+import React from 'react';
+import UserRegistration from './component/UserRegistration';
 
 const routes = createBrowserRouter([
 
   {
     path:"medicine",
-    element:<> <Medicine/> <Navbar/> </>
+    element:<> <Navbar/> <Medicine/>  </>
   },
   {
-    path:"navbar",
+    path:"/",
     element:<> <Navbar/> </>
+  },
+  {
+    path:"registration",
+    element:<> <UserRegistration/> </>
   }
 ])
 
